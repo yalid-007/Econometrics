@@ -34,4 +34,28 @@ Q4-5 Interpret your results. What happens to your estimators as N increases?
 
 Q4-6 Explain the difference between unbiasedness (finite sample property) and consistency (large sample / asymptotic property).
 
+Q6-1 Plot the scatterplot of education on hourly earnings. Be sure to label your graphs correctly (you will lose points if you don’t). Add + stat_summary(fun = "mean", geom = "smooth") to your code to see the conditional expectation function.
+
+Include the output for credit. What do you observe? Is this the causal effect?
+
+Q6-2 First load the stargazer package for nicer outputs:
+
+install.packages("stargazer")
+library(stargazer)
+Now, run the regression of
+log(wagei)=β0+β1educi+εi
+
+Print your results using the stargazer package. Include the regression output table. Interpret the meaning of the coefficients. Is this the causal effect of an additional year of education on wages? Why or why not? Is it an overestimate or underestimate?
+
+Q6-3 Plot the scatter plot of education on wages, as in Q6-1, but this time add the regression line instead of the conditional expectation function by including + geom_smooth(method = 'lm', se= FALSE). Include the plot for credit. What does your regression model predict the average wage to be with 0 years of education? Interpret.
+
+Q6-4 Look at the data dictionary. profocc is a variable that is equal to 1 if in professional occupation (lawyer, doctor, etc.) and equal to 0 otherwise. Plot the scatterplot of profocc against wages, and another scatterplot of profocc against education. Include both outputs (label your graphs). What do you observe? What does this tell you about the omitted variable bias?
+
+Q6-5 Now run the following regression:
+log(wagei)=β0+β1educi+β2profocci+εi
+
+Print your results using the stargazer package. Include the regression output table. Does this confirm your suspicion that there was OVB in the short form regression? Interpret the meaning of the coefficients.
+
+
+
 
